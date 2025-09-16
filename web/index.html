@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Irrigação Inteligente - Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>🌱 Irrigação Inteligente</h1>
+      <p>Monitoramento e Controle em Tempo Real - ESP32</p>
+    </div>
+    <button class="theme-toggle" id="themeToggle">🌙 Escuro</button>
+  </header>
+
+  <main class="container">
+    <!-- Cards -->
+    <section class="cards">
+      <div class="card">
+        <h3>Umidade Atual</h3>
+        <p id="umidadeAtual">-- %</p>
+      </div>
+      <div class="card">
+        <h3>Fluxo de Água</h3>
+        <p id="fluxoAtual">-- L/min</p>
+      </div>
+      <div class="card">
+        <h3>Status Válvula</h3>
+        <p id="statusValvula">Desconhecido</p>
+      </div>
+    </section>
+
+    <!-- Controles -->
+    <section class="controls">
+      <button id="btnLigar">▶ Ligar Irrigação</button>
+      <button id="btnDesligar">⏹ Desligar Irrigação</button>
+    </section>
+
+    <!-- Gráficos -->
+    <section class="charts">
+      <h3>📊 Monitoramento em Tempo Real</h3>
+      <canvas id="umidadeChart" height="260"></canvas>
+      <canvas id="vazaoChart" height="260"></canvas>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
